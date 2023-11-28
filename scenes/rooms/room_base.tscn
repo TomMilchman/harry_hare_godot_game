@@ -166,3 +166,4 @@ layer_1/tile_data = PackedInt32Array()
 script = ExtResource("3_wwayh")
 
 [node name="TransitionPoints" type="Node2D" parent="."]
+metadata/_edit_lock_ = true

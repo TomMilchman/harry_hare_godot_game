@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Harry Hare"
-run/main_scene="res://scenes/rooms/room0.tscn"
+run/main_scene="res://scenes/rooms/room_0.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
 

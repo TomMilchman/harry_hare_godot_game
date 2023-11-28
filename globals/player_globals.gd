@@ -7,7 +7,7 @@ var spawn_facing_right: bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	starting_pos = Vector2(0,0)
+	starting_pos = Vector2(500,700)
 	spawn_facing_right = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
