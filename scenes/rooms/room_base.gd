@@ -11,5 +11,3 @@ func _ready():
 	camera.limit_right = pos.x + shape.size.x / 2
 	camera.limit_top = pos.y - shape.size.y / 2 
 	camera.limit_bottom = pos.y + shape.size.y / 2
-	
-	

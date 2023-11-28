@@ -15,6 +15,11 @@ run/main_scene="res://scenes/rooms/room0.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+PlayerGlobals="*res://globals/player_globals.gd"
+TransitionLayer="*res://globals/transition_layer.tscn"
+
 [dotnet]
 
 project/assembly_name="Harry Hare"

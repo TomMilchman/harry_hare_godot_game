@@ -9,7 +9,8 @@ const JUMP_VELOCITY = -530.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
-	sprite.flip_h = true
+	position = PlayerGlobals.starting_pos
+	sprite.flip_h = PlayerGlobals.spawn_facing_right
 
 func _physics_process(delta):
 	# Add the gravity.
