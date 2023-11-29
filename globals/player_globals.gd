@@ -9,7 +9,3 @@ var spawn_facing_right: bool
 func _ready():
 	starting_pos = Vector2(500,700)
 	spawn_facing_right = true
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass

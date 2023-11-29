@@ -7,4 +7,8 @@ extends Area2D
 @export_group("")
 
 func _on_body_entered(body):
+	var player = body as Player
+	var tween = create_tween()
+	tween.tween_property(player, "speed", 0, 0.5)
+	player.paused_movement = true
 	TransitionLayer.transition_to_room(transition_scene, transition_position, face_right)

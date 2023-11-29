@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://uktpfbwdg470"]
+
+[ext_resource type="PackedScene" uid="uid://bfixfggcwpyrq" path="res://scenes/rooms/room_0.tscn" id="1_o6o46"]
+[ext_resource type="PackedScene" uid="uid://mi6tx8otn81a" path="res://scenes/rooms/room_1.tscn" id="2_fj2fe"]
+
+[node name="Map" type="Node2D"]
+position = Vector2(568, 184)
+scale = Vector2(0.5, 0.5)
+
+[node name="room0" parent="." instance=ExtResource("1_o6o46")]
+position = Vector2(64, -176)
+scale = Vector2(0.5, 0.5)
+
+[node name="Room1" parent="." instance=ExtResource("2_fj2fe")]
+position = Vector2(-576, -48)
+scale = Vector2(0.5, 0.5)
