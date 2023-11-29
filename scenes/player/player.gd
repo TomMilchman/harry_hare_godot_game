@@ -33,7 +33,7 @@ func _physics_process(delta):
 		var direction = Input.get_axis("left", "right")
 		if direction:
 			velocity.x = direction * speed
-			sprite.flip_h = direction >=0
+			sprite.flip_h = (direction >= 0)
 			
 			if is_on_floor():
 				$AnimationPlayer.play("running")
@@ -42,5 +42,10 @@ func _physics_process(delta):
 			
 			if is_on_floor():
 				$AnimationPlayer.play("idle")
+			
+		#Execute unlockable abilities, if they're unlocked
+		for ability_name in AbilityManager.unlocked_abilities.keys():
+			var ability = AbilityManager.unlocked_abilities[ability_name]
+			ability.execute(self)
 
 		move_and_slide()

@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://71rlssepm1iw"]
+
+[ext_resource type="Script" path="res://scenes/ability_tokens/token_base.gd" id="1_a18it"]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_a18it")
+
+[node name="TokenBase" type="Node2D" parent="."]
+script = ExtResource("1_a18it")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../TokenBase")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

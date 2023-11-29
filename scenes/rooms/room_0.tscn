@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bfixfggcwpyrq"]
+[gd_scene load_steps=5 format=3 uid="uid://bfixfggcwpyrq"]
 
 [ext_resource type="PackedScene" uid="uid://b30waypxt3fp3" path="res://scenes/rooms/room_base.tscn" id="1_h0r6p"]
 [ext_resource type="PackedScene" uid="uid://xd5f3py011m4" path="res://scenes/transition_points/transition_point.tscn" id="2_0nj4n"]
+[ext_resource type="PackedScene" uid="uid://3a4j16tg8lsi" path="res://scenes/ability_tokens/double_jump_token.tscn" id="3_bi4e7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0dw2w"]
 size = Vector2(1344, 768)
@@ -25,3 +26,6 @@ shape = SubResource("RectangleShape2D_0dw2w")
 position = Vector2(-32, 728)
 transition_scene = "res://scenes/rooms/room_1.tscn"
 transition_position = Vector2(960, 540)
+
+[node name="DoubleJumpToken" parent="." index="4" instance=ExtResource("3_bi4e7")]
+position = Vector2(344, 680)
