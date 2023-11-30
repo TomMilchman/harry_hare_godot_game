@@ -1,12 +1,10 @@
 extends Node
 
-var unlocked_abilities = {}
+var unlocked_abilities: Array = []
 
 func add_ability(ability_name: String) -> void:
 	if not unlocked_abilities.has(ability_name):
-		var ability_to_load = "res://abilities/"+ ability_name + ".gd"
-		var ability = load(ability_to_load)
-		unlocked_abilities[ability_name] = ability
+		unlocked_abilities.append(ability_name) 
 
 func has_ability(ability_name: String) -> bool:
 	return unlocked_abilities.has(ability_name)

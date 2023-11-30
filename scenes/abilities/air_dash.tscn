@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ch3jcb0ou5w7x"]
+
+[ext_resource type="Script" path="res://scenes/abilities/air_dash.gd" id="1_lvlsl"]
+
+[node name="air_dash" type="Node2D"]
+script = ExtResource("1_lvlsl")

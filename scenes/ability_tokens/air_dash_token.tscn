@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://dp2cwb8jwwub8"]
+
+[ext_resource type="PackedScene" uid="uid://71rlssepm1iw" path="res://scenes/ability_tokens/token_base.tscn" id="1_yc1vu"]
+[ext_resource type="Texture2D" uid="uid://cxtv4wefsndcg" path="res://graphics/ability_tokens/Air Dash Powerup.png" id="2_684uw"]
+
+[sub_resource type="Animation" id="Animation_k8jjc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_lntw3"]
+resource_name = "sparkling"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kf1eb"]
+_data = {
+"RESET": SubResource("Animation_k8jjc"),
+"sparkling": SubResource("Animation_lntw3")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dago0"]
+size = Vector2(16, 16)
+
+[node name="AirDash" instance=ExtResource("1_yc1vu")]
+scale = Vector2(5, 5)
+ability_name = "air_dash"
+
+[node name="Sprite2D" parent="." index="1"]
+texture_filter = 1
+texture = ExtResource("2_684uw")
+hframes = 10
+
+[node name="AnimationPlayer" parent="." index="2"]
+autoplay = "sparkling"
+libraries = {
+"": SubResource("AnimationLibrary_kf1eb")
+}
+
+[node name="CollisionShape2D" parent="." index="3"]
+position = Vector2(-9.53674e-08, 0)
+shape = SubResource("RectangleShape2D_dago0")

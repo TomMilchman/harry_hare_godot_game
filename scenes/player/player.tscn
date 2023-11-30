@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://b54uwp4xf5qx"]
+[gd_scene load_steps=12 format=3 uid="uid://b54uwp4xf5qx"]
 
 [ext_resource type="Texture2D" uid="uid://fueqirilcf1g" path="res://graphics/player/Harry Hare Character Sheet.png" id="1_0o8ck"]
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_pki3f"]
+[ext_resource type="PackedScene" uid="uid://ch3jcb0ou5w7x" path="res://scenes/abilities/air_dash.tscn" id="3_2ajhv"]
+[ext_resource type="PackedScene" uid="uid://b6y50tnjqtw5e" path="res://scenes/abilities/double_jump.tscn" id="4_ljl4c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_it3h1"]
 size = Vector2(29.5, 32)
@@ -71,9 +73,27 @@ tracks/0/keys = {
 "values": [4, 5, 6, 7]
 }
 
+[sub_resource type="Animation" id="Animation_8hajp"]
+resource_name = "air_dash"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [12]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jlycb"]
 _data = {
 "RESET": SubResource("Animation_tbb8f"),
+"air_dash": SubResource("Animation_8hajp"),
 "idle": SubResource("Animation_r3nml"),
 "jump": SubResource("Animation_tjshw"),
 "running": SubResource("Animation_gb0iq")
@@ -102,3 +122,9 @@ libraries = {
 }
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Abilities" type="Node2D" parent="."]
+
+[node name="air_dash" parent="Abilities" instance=ExtResource("3_2ajhv")]
+
+[node name="double_jump" parent="Abilities" instance=ExtResource("4_ljl4c")]
