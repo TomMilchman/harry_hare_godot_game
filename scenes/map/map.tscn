@@ -9,11 +9,11 @@ position = Vector2(1168, 378)
 scale = Vector2(0.5, 0.5)
 
 [node name="room0" parent="." instance=ExtResource("1_o6o46")]
-position = Vector2(64, -176)
+position = Vector2(36, -92)
 scale = Vector2(0.5, 0.5)
 
 [node name="Room1" parent="." instance=ExtResource("2_fj2fe")]
-position = Vector2(-576, -48)
+position = Vector2(-1084, -352)
 scale = Vector2(0.5, 0.5)
 
 [node name="Room2" parent="." instance=ExtResource("3_hlfkx")]

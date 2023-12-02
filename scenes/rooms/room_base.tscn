@@ -163,3 +163,5 @@ script = ExtResource("3_wwayh")
 
 [node name="TransitionPoints" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
+
+[node name="FloatingPlatforms" type="Node2D" parent="."]
