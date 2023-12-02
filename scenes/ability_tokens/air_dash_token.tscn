@@ -54,10 +54,10 @@ texture = ExtResource("2_684uw")
 hframes = 10
 
 [node name="AnimationPlayer" parent="." index="2"]
-autoplay = "sparkling"
 libraries = {
 "": SubResource("AnimationLibrary_kf1eb")
 }
+autoplay = "sparkling"
 
 [node name="CollisionShape2D" parent="." index="3"]
 position = Vector2(-9.53674e-08, 0)

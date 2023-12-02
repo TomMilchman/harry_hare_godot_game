@@ -1,35 +1,183 @@
-[gd_scene load_steps=6 format=3 uid="uid://bfixfggcwpyrq"]
+[gd_scene load_steps=7 format=3 uid="uid://bfixfggcwpyrq"]
 
 [ext_resource type="PackedScene" uid="uid://b30waypxt3fp3" path="res://scenes/rooms/room_base.tscn" id="1_h0r6p"]
 [ext_resource type="PackedScene" uid="uid://xd5f3py011m4" path="res://scenes/transition_points/transition_point.tscn" id="2_0nj4n"]
-[ext_resource type="PackedScene" uid="uid://3a4j16tg8lsi" path="res://scenes/ability_tokens/double_jump_token.tscn" id="3_bi4e7"]
-[ext_resource type="PackedScene" uid="uid://dp2cwb8jwwub8" path="res://scenes/ability_tokens/air_dash_token.tscn" id="4_1bfpc"]
+[ext_resource type="Texture2D" uid="uid://by1gehsspalyv" path="res://graphics/tilemaps/Dirt Tilemap.png" id="2_6bmtp"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j1wmi"]
+texture = ExtResource("2_6bmtp")
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3, 8, 3, 8, 8, -8, 8)
+0:0/0/terrains_peering_bit/bottom_right_corner = 1
+0:0/0/terrains_peering_bit/bottom_side = 0
+0:0/0/terrains_peering_bit/bottom_left_corner = 1
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/probability = 0.5
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3, 8, 3, 8, 8, -8, 8)
+1:0/0/terrains_peering_bit/bottom_right_corner = 1
+1:0/0/terrains_peering_bit/bottom_side = 0
+1:0/0/terrains_peering_bit/bottom_left_corner = 1
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/probability = 0.5
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3, 8, 3, 8, 8, -8, 8)
+2:0/0/terrains_peering_bit/bottom_right_corner = 1
+2:0/0/terrains_peering_bit/bottom_side = 0
+2:0/0/terrains_peering_bit/bottom_left_corner = 1
+3:0/0 = 0
+3:0/0/terrain_set = 0
+3:0/0/probability = 0.2
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3, 8, 3, 8, 8, -8, 8)
+3:0/0/terrains_peering_bit/bottom_right_corner = 1
+3:0/0/terrains_peering_bit/bottom_side = 0
+3:0/0/terrains_peering_bit/bottom_left_corner = 1
+4:0/0 = 0
+4:0/0/terrain_set = 0
+4:0/0/probability = 0.2
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3, 8, 3, 8, 8, -8, 8)
+4:0/0/terrains_peering_bit/bottom_right_corner = 1
+4:0/0/terrains_peering_bit/bottom_side = 0
+4:0/0/terrains_peering_bit/bottom_left_corner = 1
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0/terrains_peering_bit/right_side = 0
+0:1/0/terrains_peering_bit/bottom_right_corner = 1
+0:1/0/terrains_peering_bit/bottom_side = 0
+0:1/0/terrains_peering_bit/bottom_left_corner = 0
+0:1/0/terrains_peering_bit/left_side = 0
+0:1/0/terrains_peering_bit/top_left_corner = 0
+0:1/0/terrains_peering_bit/top_side = 0
+0:1/0/terrains_peering_bit/top_right_corner = 0
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0/terrains_peering_bit/right_side = 0
+1:1/0/terrains_peering_bit/bottom_right_corner = 0
+1:1/0/terrains_peering_bit/bottom_side = 0
+1:1/0/terrains_peering_bit/bottom_left_corner = 1
+1:1/0/terrains_peering_bit/left_side = 0
+1:1/0/terrains_peering_bit/top_left_corner = 0
+1:1/0/terrains_peering_bit/top_side = 0
+1:1/0/terrains_peering_bit/top_right_corner = 0
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0/terrains_peering_bit/right_side = 0
+2:1/0/terrains_peering_bit/bottom_right_corner = 0
+2:1/0/terrains_peering_bit/bottom_side = 0
+2:1/0/terrains_peering_bit/bottom_left_corner = 0
+2:1/0/terrains_peering_bit/left_side = 0
+2:1/0/terrains_peering_bit/top_left_corner = 0
+2:1/0/terrains_peering_bit/top_side = 0
+2:1/0/terrains_peering_bit/top_right_corner = 0
+3:1/0 = 0
+3:1/0/terrain_set = 0
+3:1/0/terrain = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0/terrains_peering_bit/right_side = 0
+3:1/0/terrains_peering_bit/bottom_right_corner = 0
+3:1/0/terrains_peering_bit/bottom_side = 0
+3:1/0/terrains_peering_bit/bottom_left_corner = 0
+3:1/0/terrains_peering_bit/left_side = 0
+3:1/0/terrains_peering_bit/top_left_corner = 0
+3:1/0/terrains_peering_bit/top_side = 0
+3:1/0/terrains_peering_bit/top_right_corner = 0
+4:1/0 = 0
+4:1/0/terrain_set = 0
+4:1/0/terrain = 0
+4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:1/0/physics_layer_0/angular_velocity = 0.0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0/terrains_peering_bit/right_side = 0
+4:1/0/terrains_peering_bit/bottom_right_corner = 0
+4:1/0/terrains_peering_bit/bottom_side = 0
+4:1/0/terrains_peering_bit/bottom_left_corner = 0
+4:1/0/terrains_peering_bit/left_side = 0
+4:1/0/terrains_peering_bit/top_left_corner = 0
+4:1/0/terrains_peering_bit/top_side = 0
+4:1/0/terrains_peering_bit/top_right_corner = 0
+0:3/size_in_atlas = Vector2i(1, 3)
+0:3/0 = 0
+0:3/0/texture_origin = Vector2i(0, 5)
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
+1:3/size_in_atlas = Vector2i(2, 3)
+1:3/0 = 0
+1:3/0/texture_origin = Vector2i(0, 5)
+1:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:3/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_jliyj"]
+physics_layer_0/collision_layer = 2
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Dirt"
+terrain_set_0/terrain_0/color = Color(0.952941, 0.890196, 0.854902, 1)
+terrain_set_0/terrain_1/name = "Grass"
+terrain_set_0/terrain_1/color = Color(0.0862745, 0.784314, 0, 1)
+sources/0 = SubResource("TileSetAtlasSource_j1wmi")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0dw2w"]
 size = Vector2(1344, 768)
 
 [node name="room0" instance=ExtResource("1_h0r6p")]
-position = Vector2(64, -168)
+metadata/_edit_lock_ = true
 
 [node name="Player" parent="." index="0"]
 visible = true
-position = Vector2(664, 776)
+position = Vector2(216, 584)
 
 [node name="DirtTileMap" parent="." index="1"]
+position = Vector2(64, -192)
 layer_0/tile_data = PackedInt32Array(262144, 262144, 1, 327680, 196608, 1, 393216, 131072, 1, 458752, 196608, 1, 524288, 131072, 1, 589824, 196608, 1, 262164, 262144, 1, 327700, 131072, 1, 393236, 196608, 1, 458772, 262144, 1, 524308, 262144, 1, 589844, 196608, 1, 327681, 196608, 1, 262145, 262144, 1, 393217, 196608, 1, 458753, 262144, 1, 524289, 262144, 1, 589825, 131072, 1, 262163, 262144, 1, 327699, 131072, 1, 393235, 131072, 1, 458771, 131072, 1, 524307, 196608, 1, 589843, 196608, 1, 851968, 262144, 1, 851969, 262144, 1, 786433, 65536, 0, 851970, 196608, 1, 786434, 65536, 0, 851971, 196608, 1, 786435, 131072, 0, 851972, 262144, 1, 786436, 65536, 0, 851973, 131072, 1, 786437, 262144, 0, 851974, 262144, 1, 786438, 196608, 0, 851975, 131072, 1, 786439, 0, 0, 851976, 131072, 1, 786440, 0, 0, 851977, 196608, 1, 786441, 262144, 0, 851978, 196608, 1, 786442, 262144, 0, 851979, 131072, 1, 786443, 65536, 0, 851980, 131072, 1, 786444, 0, 0, 851981, 131072, 1, 786445, 0, 0, 851982, 262144, 1, 786446, 65536, 0, 851983, 131072, 1, 786447, 65536, 0, 851984, 131072, 1, 786448, 0, 0, 851985, 262144, 1, 786449, 262144, 0, 851986, 131072, 1, 786450, 0, 0, 851987, 262144, 1, 786451, 131072, 0, 851988, 262144, 1, 786452, 0, 0, 917504, 131072, 1, 917505, 131072, 1, 917506, 262144, 1, 917507, 131072, 1, 917508, 262144, 1, 917509, 131072, 1, 917510, 131072, 1, 917511, 196608, 1, 917512, 262144, 1, 917513, 262144, 1, 917514, 262144, 1, 917515, 131072, 1, 917516, 196608, 1, 917517, 196608, 1, 917518, 196608, 1, 917519, 131072, 1, 917520, 131072, 1, 917521, 196608, 1, 917522, 196608, 1, 917523, 131072, 1, 917524, 262144, 1, 327679, 196608, 1, 393215, 131072, 1, 458751, 131072, 1, 524287, 262144, 1, 589823, 262144, 1, 655359, 131072, 1, 917503, 131072, 1, 983039, 262144, 1, 786432, 131072, 0, 851967, 0, 0, 917525, 262144, 1, 851989, 131072, 1, 786453, 65536, 0, 589845, 196608, 1, 524309, 196608, 1, 458773, 262144, 1, 393237, 131072, 1, 327701, 196608, 1, 262165, 131072, 1, 262162, 131072, 1, 262161, 262144, 1, 262160, 196608, 1, 262159, 196608, 1, 262158, 196608, 1, 262157, 131072, 1, 262156, 196608, 1, 262155, 131072, 1, 262154, 131072, 1, 262150, 131072, 1, 262149, 131072, 1, 262148, 131072, 1, 262147, 262144, 1, 262146, 262144, 1, 262151, 131072, 1, 262152, 131072, 1, 262153, 262144, 1, 262143, 131072, 1, 196608, 262144, 1, 196609, 196608, 1, 196610, 196608, 1, 196611, 131072, 1, 196612, 196608, 1, 196613, 131072, 1, 196614, 131072, 1, 196615, 196608, 1, 196616, 196608, 1, 196617, 131072, 1, 196618, 196608, 1, 196619, 131072, 1, 196620, 196608, 1, 196621, 196608, 1, 196622, 196608, 1, 196623, 262144, 1, 196624, 131072, 1, 196625, 262144, 1, 196626, 196608, 1, 196627, 262144, 1, 196628, 262144, 1, 196629, 196608, 1, 327682, 196608, 1, 327683, 262144, 1, 327684, 196608, 1, 327685, 131072, 1, 327686, 262144, 1, 327687, 262144, 1, 327688, 131072, 1, 327689, 262144, 1, 327690, 131072, 1, 327691, 131072, 1, 327692, 131072, 1, 327693, 262144, 1, 327694, 262144, 1, 327695, 262144, 1, 327696, 196608, 1, 327697, 131072, 1, 327698, 262144, 1)
+
+[node name="DirtTileMap2" type="TileMap" parent="." index="2"]
+texture_filter = 1
+position = Vector2(64, -192)
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_jliyj")
+format = 2
+layer_0/name = "foreground"
+layer_0/z_index = 2
+layer_0/tile_data = PackedInt32Array(262144, 262144, 1, 327680, 196608, 1, 393216, 131072, 1, 458752, 196608, 1, 524288, 131072, 1, 589824, 196608, 1, 262164, 262144, 1, 327700, 131072, 1, 393236, 196608, 1, 458772, 262144, 1, 524308, 262144, 1, 589844, 196608, 1, 327681, 196608, 1, 262145, 262144, 1, 393217, 196608, 1, 458753, 262144, 1, 524289, 262144, 1, 589825, 131072, 1, 262163, 262144, 1, 327699, 131072, 1, 393235, 131072, 1, 458771, 131072, 1, 524307, 196608, 1, 589843, 196608, 1, 851968, 262144, 1, 851969, 262144, 1, 786433, 65536, 0, 851970, 196608, 1, 786434, 65536, 0, 851971, 196608, 1, 786435, 131072, 0, 851972, 262144, 1, 786436, 65536, 0, 851973, 131072, 1, 786437, 262144, 0, 851974, 262144, 1, 786438, 196608, 0, 851975, 131072, 1, 786439, 0, 0, 851976, 131072, 1, 786440, 0, 0, 851977, 196608, 1, 786441, 262144, 0, 851978, 196608, 1, 786442, 262144, 0, 851979, 131072, 1, 786443, 65536, 0, 851980, 131072, 1, 786444, 0, 0, 851981, 131072, 1, 786445, 0, 0, 851982, 262144, 1, 786446, 65536, 0, 851983, 131072, 1, 786447, 65536, 0, 851984, 131072, 1, 786448, 0, 0, 851985, 262144, 1, 786449, 262144, 0, 851986, 131072, 1, 786450, 0, 0, 851987, 262144, 1, 786451, 131072, 0, 851988, 262144, 1, 786452, 0, 0, 917504, 131072, 1, 917505, 131072, 1, 917506, 262144, 1, 917507, 131072, 1, 917508, 262144, 1, 917509, 131072, 1, 917510, 131072, 1, 917511, 196608, 1, 917512, 262144, 1, 917513, 262144, 1, 917514, 262144, 1, 917515, 131072, 1, 917516, 196608, 1, 917517, 196608, 1, 917518, 196608, 1, 917519, 131072, 1, 917520, 131072, 1, 917521, 196608, 1, 917522, 196608, 1, 917523, 131072, 1, 917524, 262144, 1, 327679, 196608, 1, 393215, 131072, 1, 458751, 131072, 1, 524287, 262144, 1, 589823, 262144, 1, 655359, 131072, 1, 917503, 131072, 1, 983039, 262144, 1, 786432, 131072, 0, 851967, 0, 0, 917525, 262144, 1, 851989, 131072, 1, 786453, 65536, 0, 589845, 196608, 1, 524309, 196608, 1, 458773, 262144, 1, 393237, 131072, 1, 327701, 196608, 1, 262165, 131072, 1, 262162, 131072, 1, 262161, 262144, 1, 262160, 196608, 1, 262159, 196608, 1, 262158, 196608, 1, 262157, 131072, 1, 262156, 196608, 1, 262155, 131072, 1, 262154, 131072, 1, 262150, 131072, 1, 262149, 131072, 1, 262148, 131072, 1, 262147, 262144, 1, 262146, 262144, 1, 262151, 131072, 1, 262152, 131072, 1, 262153, 262144, 1, 262143, 131072, 1, 196608, 262144, 1, 196609, 196608, 1, 196610, 196608, 1, 196611, 131072, 1, 196612, 196608, 1, 196613, 131072, 1, 196614, 131072, 1, 196615, 196608, 1, 196616, 196608, 1, 196617, 131072, 1, 196618, 196608, 1, 196619, 131072, 1, 196620, 196608, 1, 196621, 196608, 1, 196622, 196608, 1, 196623, 262144, 1, 196624, 131072, 1, 196625, 262144, 1, 196626, 196608, 1, 196627, 262144, 1, 196628, 262144, 1, 196629, 196608, 1, 327682, 196608, 1, 327683, 262144, 1, 327684, 196608, 1, 327685, 131072, 1, 327686, 262144, 1, 327687, 262144, 1, 327688, 131072, 1, 327689, 262144, 1, 327690, 131072, 1, 327691, 131072, 1, 327692, 131072, 1, 327693, 262144, 1, 327694, 262144, 1, 327695, 262144, 1, 327696, 196608, 1, 327697, 131072, 1, 327698, 262144, 1)
+layer_1/name = "backfround"
+layer_1/tile_data = PackedInt32Array()
+
+[node name="CameraLockArea" parent="." index="3"]
+position = Vector2(64, -192)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CameraLockArea" index="0"]
 visible = false
 position = Vector2(672, 576)
 shape = SubResource("RectangleShape2D_0dw2w")
 
-[node name="TransitionPoint" parent="TransitionPoints" index="0" instance=ExtResource("2_0nj4n")]
+[node name="TransitionPoints" parent="." index="4"]
+position = Vector2(64, -192)
+
+[node name="Room1-RightBottom" parent="TransitionPoints" index="0" instance=ExtResource("2_0nj4n")]
 position = Vector2(-32, 728)
 transition_scene = "res://scenes/rooms/room_1.tscn"
-transition_position = Vector2(960, 540)
-
-[node name="DoubleJumpToken" parent="." index="4" instance=ExtResource("3_bi4e7")]
-position = Vector2(344, 680)
-
-[node name="AirDash" parent="." index="5" instance=ExtResource("4_1bfpc")]
-position = Vector2(984, 680)
+transition_position = Vector2(2012, 1112)

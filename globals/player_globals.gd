@@ -7,5 +7,5 @@ var spawn_facing_right: bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	starting_pos = Vector2(500,700)
+	starting_pos = Vector2(744,584)
 	spawn_facing_right = true
