@@ -1,5 +1,9 @@
 extends Node
 
+#These are used for determining where the player spawns after death
+var spawn_room_location: String = "res://scenes/rooms/room_0.tscn"
+var spawn_pos: Vector2 = Vector2(744,584) #Always the same as the checkpoint location
+
 #Player's starting position when entering a room
 var starting_pos: Vector2
 #Player's spawning direction
@@ -7,5 +11,5 @@ var spawn_facing_right: bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	starting_pos = Vector2(744,584)
+	starting_pos = spawn_pos
 	spawn_facing_right = true
