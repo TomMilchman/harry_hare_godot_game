@@ -15,6 +15,8 @@ var can_take_damage = true #Used for iframes calculations
 func _ready():
 	position = PlayerGlobals.starting_pos
 	flip_player_to_right_or_left(PlayerGlobals.spawn_facing_right)
+	for carrot in get_tree().get_nodes_in_group("carrots"):
+		carrot.connect('heal', heal)
 
 # Input true to flip to the right, false for left
 func flip_player_to_right_or_left(is_flip: bool):

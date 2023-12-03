@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://71rlssepm1iw"]
 
-[ext_resource type="Script" path="res://scenes/ability_tokens/token_base.gd" id="1_a18it"]
+[ext_resource type="Script" path="res://scenes/collectibles/token_base.gd" id="1_a18it"]
 
 [node name="Area2D" type="Area2D"]
 collision_layer = 0

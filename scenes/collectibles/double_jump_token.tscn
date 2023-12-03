@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://3a4j16tg8lsi"]
 
-[ext_resource type="PackedScene" uid="uid://71rlssepm1iw" path="res://scenes/ability_tokens/token_base.tscn" id="1_nm1m3"]
-[ext_resource type="Texture2D" uid="uid://d1eny412e5e2a" path="res://graphics/ability_tokens/High Jump Powerup.png" id="2_to328"]
+[ext_resource type="PackedScene" uid="uid://71rlssepm1iw" path="res://scenes/collectibles/token_base.tscn" id="1_nm1m3"]
+[ext_resource type="Texture2D" uid="uid://d1eny412e5e2a" path="res://graphics/collectibles/High Jump Powerup.png" id="2_to328"]
 
 [sub_resource type="Animation" id="Animation_tfw7w"]
 length = 0.001

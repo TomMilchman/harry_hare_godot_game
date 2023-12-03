@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dp2cwb8jwwub8"]
 
-[ext_resource type="PackedScene" uid="uid://71rlssepm1iw" path="res://scenes/ability_tokens/token_base.tscn" id="1_yc1vu"]
-[ext_resource type="Texture2D" uid="uid://cxtv4wefsndcg" path="res://graphics/ability_tokens/Air Dash Powerup.png" id="2_684uw"]
+[ext_resource type="PackedScene" uid="uid://71rlssepm1iw" path="res://scenes/collectibles/token_base.tscn" id="1_yc1vu"]
+[ext_resource type="Texture2D" uid="uid://cxtv4wefsndcg" path="res://graphics/collectibles/Air Dash Powerup.png" id="2_684uw"]
 
 [sub_resource type="Animation" id="Animation_k8jjc"]
 length = 0.001

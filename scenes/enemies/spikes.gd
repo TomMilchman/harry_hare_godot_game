@@ -9,4 +9,4 @@ func _ready():
 func _on_deal_damage_to_player(body):
 	if body is Player:
 		var player = body as Player
-		player.take_damage(PlayerGlobals.MAX_HEALTH)
+		player.take_damage(1)

@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://b30waypxt3fp3" path="res://scenes/rooms/room_base.tscn" id="1_h0r6p"]
 [ext_resource type="PackedScene" uid="uid://xd5f3py011m4" path="res://scenes/transition_points/transition_point.tscn" id="2_0nj4n"]
 [ext_resource type="Texture2D" uid="uid://by1gehsspalyv" path="res://graphics/tilemaps/Dirt Tilemap.png" id="2_6bmtp"]
-[ext_resource type="PackedScene" uid="uid://3a4j16tg8lsi" path="res://scenes/ability_tokens/double_jump_token.tscn" id="4_xr0k0"]
-[ext_resource type="PackedScene" uid="uid://dp2cwb8jwwub8" path="res://scenes/ability_tokens/air_dash_token.tscn" id="5_yjftj"]
+[ext_resource type="PackedScene" uid="uid://3a4j16tg8lsi" path="res://scenes/collectibles/double_jump_token.tscn" id="4_xr0k0"]
+[ext_resource type="PackedScene" uid="uid://dp2cwb8jwwub8" path="res://scenes/collectibles/air_dash_token.tscn" id="5_yjftj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j1wmi"]
 texture = ExtResource("2_6bmtp")
