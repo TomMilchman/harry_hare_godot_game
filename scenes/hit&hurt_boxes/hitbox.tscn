@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://5skmypop7gex"]
+
+[ext_resource type="Script" path="res://scenes/hit&hurt_boxes/hitbox.gd" id="1_i2exe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_51ywo"]
+
+[node name="Hitbox" type="Area2D"]
+script = ExtResource("1_i2exe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_51ywo")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -7,9 +7,10 @@ const JUMP_VELOCITY = -530.0
 var speed = 300.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var paused_movement = false
-var disabled_basic_movement = false
-var facing_right
+var paused_movement = false #Enabled: player cannot move
+var disabled_basic_movement = false #Enabled: player can only perform unlocked abilities
+var facing_right #Updates each time the player turns
+var can_take_damage = true #Used for iframes calculations
 
 func _ready():
 	position = PlayerGlobals.starting_pos
@@ -57,6 +58,37 @@ func _physics_process(delta):
 			ability.execute(self)
 
 		move_and_slide()
+		
+func take_damage(damage_amount: int):
+	var health_after_damage = PlayerGlobals.current_health - damage_amount
+	
+	if can_take_damage:
+		PlayerGlobals.current_health = clamp(health_after_damage, 0, PlayerGlobals.MAX_HEALTH)
+		
+		iframes()
+		
+		if PlayerGlobals.current_health <= 0:
+			die()
+			
+func heal(heal_amount: int):
+	var health_after_heal = PlayerGlobals.current_health + heal_amount
+	PlayerGlobals.current_health = clamp(health_after_heal, 0, PlayerGlobals.MAX_HEALTH)
+
+func die():
+	paused_movement = true
+	$AnimationPlayer.play("death")
+	PlayerGlobals.current_health = PlayerGlobals.MAX_HEALTH
+	TransitionLayer.transition_to_room(PlayerGlobals.spawn_room_location, PlayerGlobals.spawn_pos, true)
+
+func iframes():
+	can_take_damage = false
+	
+	if (PlayerGlobals.current_health > 0):
+		$EffectsPlayer.play("iframes")
+		await get_tree().create_timer(1.5).timeout
+		$EffectsPlayer.stop()
+		can_take_damage = true
+	
 
 func play_animation(animation_name: String):
 	$AnimationPlayer.play(animation_name)

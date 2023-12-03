@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://doi0qmdjbewul"]
+
+[ext_resource type="Texture2D" uid="uid://bcrugsmon0hsj" path="res://graphics/enemies/Spikes.png" id="1_3m4w1"]
+[ext_resource type="Script" path="res://scenes/enemies/spikes.gd" id="1_7dmio"]
+[ext_resource type="PackedScene" uid="uid://5skmypop7gex" path="res://scenes/hit&hurt_boxes/hitbox.tscn" id="1_iku68"]
+
+[node name="Spikes" type="Node2D"]
+scale = Vector2(4, 4)
+script = ExtResource("1_7dmio")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_3m4w1")
+
+[node name="Hitbox" parent="." instance=ExtResource("1_iku68")]
+position = Vector2(0, 2)
+scale = Vector2(-0.80188, 0.401822)
+collision_layer = 8

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b54uwp4xf5qx"]
+[gd_scene load_steps=16 format=3 uid="uid://b54uwp4xf5qx"]
 
 [ext_resource type="Texture2D" uid="uid://fueqirilcf1g" path="res://graphics/player/Harry Hare Character Sheet.png" id="1_0o8ck"]
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_pki3f"]
@@ -90,13 +90,69 @@ tracks/0/keys = {
 "values": [4, 5, 6, 7]
 }
 
+[sub_resource type="Animation" id="Animation_ngcs5"]
+resource_name = "death"
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [16]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jlycb"]
 _data = {
 "RESET": SubResource("Animation_tbb8f"),
 "air_dash": SubResource("Animation_8hajp"),
+"death": SubResource("Animation_ngcs5"),
 "idle": SubResource("Animation_r3nml"),
 "jump": SubResource("Animation_tjshw"),
 "running": SubResource("Animation_gb0iq")
+}
+
+[sub_resource type="Animation" id="Animation_cmpiv"]
+resource_name = "iframes"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0mbwe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vlart"]
+_data = {
+"RESET": SubResource("Animation_0mbwe"),
+"iframes": SubResource("Animation_cmpiv")
 }
 
 [node name="Player" type="CharacterBody2D"]
@@ -119,6 +175,11 @@ shape = SubResource("RectangleShape2D_it3h1")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_jlycb")
+}
+
+[node name="EffectsPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vlart")
 }
 
 [node name="Camera2D" type="Camera2D" parent="."]
