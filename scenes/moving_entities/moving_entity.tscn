@@ -1,22 +1,64 @@
-[gd_scene load_steps=2 format=3 uid="uid://d3jgcjx4j6bxp"]
+[gd_scene load_steps=5 format=3 uid="uid://d3jgcjx4j6bxp"]
 
 [ext_resource type="Script" path="res://scenes/moving_entities/moving_entity.gd" id="1_mrjf0"]
+
+[sub_resource type="Animation" id="Animation_c0x8o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_hiyon"]
+resource_name = "move"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_es1fk"]
+_data = {
+"RESET": SubResource("Animation_c0x8o"),
+"move": SubResource("Animation_hiyon")
+}
 
 [node name="MovingEntity" type="Path2D"]
 script = ExtResource("1_mrjf0")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(14.7043, 0)
+progress = 14.7194
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="PathFollow2D"]
 remote_path = NodePath("../../AnimatableBody2D")
 update_rotation = false
 
 [node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+position = Vector2(14.7043, 0)
 collision_layer = 0
 collision_mask = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_es1fk")
+}

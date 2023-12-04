@@ -1,12 +1,16 @@
-[gd_scene load_steps=16 format=3 uid="uid://b54uwp4xf5qx"]
+[gd_scene load_steps=18 format=3 uid="uid://b54uwp4xf5qx"]
 
 [ext_resource type="Texture2D" uid="uid://fueqirilcf1g" path="res://graphics/player/Harry Hare Character Sheet.png" id="1_0o8ck"]
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_pki3f"]
 [ext_resource type="PackedScene" uid="uid://ch3jcb0ou5w7x" path="res://scenes/abilities/air_dash.tscn" id="3_2ajhv"]
+[ext_resource type="Script" path="res://scenes/player/PlayerFeetHitbox.gd" id="3_rn25o"]
 [ext_resource type="PackedScene" uid="uid://b6y50tnjqtw5e" path="res://scenes/abilities/double_jump.tscn" id="4_ljl4c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_it3h1"]
 size = Vector2(29.5, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t3nlu"]
+size = Vector2(20, 4)
 
 [sub_resource type="Animation" id="Animation_tbb8f"]
 length = 0.001
@@ -157,9 +161,8 @@ _data = {
 
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(2, 2)
-collision_mask = 6
+collision_mask = 14
 script = ExtResource("1_pki3f")
-metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -171,6 +174,15 @@ vframes = 5
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.75, 0)
 shape = SubResource("RectangleShape2D_it3h1")
+
+[node name="PlayerFeetHitbox" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("3_rn25o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerFeetHitbox"]
+position = Vector2(2, 14)
+shape = SubResource("RectangleShape2D_t3nlu")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

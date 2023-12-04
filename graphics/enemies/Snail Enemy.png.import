@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcrugsmon0hsj"
-path="res://.godot/imported/Spikes.png-cf8c8609b55fd865007e0ec1e684044f.ctex"
+uid="uid://d4n8cckf4oyu"
+path="res://.godot/imported/Snail Enemy.png-93e7c59088135422e099e967bd889c53.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/enemies/Spikes.png"
-dest_files=["res://.godot/imported/Spikes.png-cf8c8609b55fd865007e0ec1e684044f.ctex"]
+source_file="res://graphics/enemies/Snail Enemy.png"
+dest_files=["res://.godot/imported/Snail Enemy.png-93e7c59088135422e099e967bd889c53.ctex"]
 
 [params]
 

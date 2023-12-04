@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://doi0qmdjbewul"]
 
-[ext_resource type="Texture2D" uid="uid://bcrugsmon0hsj" path="res://graphics/enemies/Spikes.png" id="1_3m4w1"]
-[ext_resource type="Script" path="res://scenes/enemies/spikes.gd" id="1_7dmio"]
-[ext_resource type="PackedScene" uid="uid://5skmypop7gex" path="res://scenes/hit&hurt_boxes/hitbox.tscn" id="1_iku68"]
+[ext_resource type="Texture2D" uid="uid://bcrugsmon0hsj" path="res://graphics/obstacles/Spikes.png" id="1_3m4w1"]
+[ext_resource type="Script" path="res://scenes/obstacles/spikes.gd" id="1_7dmio"]
+[ext_resource type="PackedScene" uid="uid://5skmypop7gex" path="res://scenes/enemy_hit&hurt_boxes/enemy_hitbox.tscn" id="1_iku68"]
 
 [node name="Spikes" type="Node2D"]
 scale = Vector2(4, 4)

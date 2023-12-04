@@ -16,7 +16,9 @@ func _ready():
 	position = PlayerGlobals.starting_pos
 	flip_player_to_right_or_left(PlayerGlobals.spawn_facing_right)
 	for carrot in get_tree().get_nodes_in_group("carrots"):
-		carrot.connect('heal', heal)
+		carrot.connect('collected', heal)
+	for enemy in get_tree().get_nodes_in_group("enemies"):
+		enemy.connect("player_stomped_on_enemy", stomped_on_enemy)
 
 # Input true to flip to the right, false for left
 func flip_player_to_right_or_left(is_flip: bool):
@@ -91,6 +93,9 @@ func iframes():
 		$EffectsPlayer.stop()
 		can_take_damage = true
 	
+
+func stomped_on_enemy():
+	velocity.y = JUMP_VELOCITY
 
 func play_animation(animation_name: String):
 	$AnimationPlayer.play(animation_name)

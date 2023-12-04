@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://ct4nh4h78jjxx"]
+[gd_scene load_steps=12 format=3 uid="uid://ct4nh4h78jjxx"]
 
 [ext_resource type="PackedScene" uid="uid://b30waypxt3fp3" path="res://scenes/rooms/room_base.tscn" id="1_7xoqk"]
 [ext_resource type="PackedScene" uid="uid://xd5f3py011m4" path="res://scenes/transition_points/transition_point.tscn" id="2_mipgg"]
 [ext_resource type="PackedScene" uid="uid://dgjvukrejeuqe" path="res://scenes/moving_entities/moving_platform.tscn" id="3_f6dic"]
 [ext_resource type="PackedScene" uid="uid://b4vgau5kl5cw2" path="res://scenes/objects/checkpoint_flag.tscn" id="4_qha8u"]
-[ext_resource type="PackedScene" uid="uid://doi0qmdjbewul" path="res://scenes/enemies/spikes.tscn" id="5_3rx80"]
+[ext_resource type="PackedScene" uid="uid://doi0qmdjbewul" path="res://scenes/obstacles/spikes.tscn" id="5_3rx80"]
+[ext_resource type="PackedScene" uid="uid://dwledes4devk4" path="res://scenes/moving_entities/snail_enemy.tscn" id="5_52462"]
 [ext_resource type="PackedScene" uid="uid://dunxwa3qqxce2" path="res://scenes/collectibles/carrot.tscn" id="6_h5m1j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wwm6g"]
@@ -19,6 +20,12 @@ point_count = 2
 [sub_resource type="Curve2D" id="Curve2D_otdgw"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, 126)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_im5ls"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1.75, 20.25, 0, 0, 0, 0, -60.75, 20.25)
 }
 point_count = 2
 
@@ -60,6 +67,10 @@ position = Vector2(280, 576)
 
 [node name="CheckpointFlag" parent="." index="5" instance=ExtResource("4_qha8u")]
 position = Vector2(2056, 648)
+
+[node name="SnailEnemy" parent="Enemies" index="0" instance=ExtResource("5_52462")]
+position = Vector2(1679, 1595)
+curve = SubResource("Curve2D_im5ls")
 
 [node name="Spikes" parent="Spikes" index="0" instance=ExtResource("5_3rx80")]
 position = Vector2(872, 592)

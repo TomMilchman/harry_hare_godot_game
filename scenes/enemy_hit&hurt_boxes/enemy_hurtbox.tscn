@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqugv2m51o32n"]
+
+[ext_resource type="Script" path="res://scenes/enemy_hit&hurt_boxes/enemy_hurtbox.gd" id="1_hfruh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vb0f2"]
+
+[node name="EnemyHurtbox" type="Area2D"]
+collision_layer = 0
+collision_mask = 16
+script = ExtResource("1_hfruh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vb0f2")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

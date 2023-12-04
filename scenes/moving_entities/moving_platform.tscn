@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://d3jgcjx4j6bxp" path="res://scenes/moving_entities/moving_entity.tscn" id="1_dmm4x"]
 [ext_resource type="Texture2D" uid="uid://bj8v7s33xets3" path="res://graphics/platforms/Floating Platform.png" id="2_isiva"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pkggx"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t20e7"]
 size = Vector2(48, 5)
 
 [sub_resource type="Animation" id="Animation_i46dx"]
@@ -61,8 +61,8 @@ collision_mask = 1
 texture_filter = 1
 texture = ExtResource("2_isiva")
 
-[node name="CollisionShape2D" parent="AnimatableBody2D" index="1"]
-shape = SubResource("RectangleShape2D_pkggx")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D" index="1"]
+shape = SubResource("RectangleShape2D_t20e7")
 one_way_collision = true
 
 [node name="AnimationPlayer" parent="." index="2"]
