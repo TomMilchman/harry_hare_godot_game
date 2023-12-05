@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ct4nh4h78jjxx"]
+[gd_scene load_steps=15 format=3 uid="uid://ct4nh4h78jjxx"]
 
 [ext_resource type="PackedScene" uid="uid://b30waypxt3fp3" path="res://scenes/rooms/room_base.tscn" id="1_7xoqk"]
 [ext_resource type="PackedScene" uid="uid://xd5f3py011m4" path="res://scenes/transition_points/transition_point.tscn" id="2_mipgg"]
@@ -26,6 +26,24 @@ point_count = 2
 [sub_resource type="Curve2D" id="Curve2D_im5ls"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 1.75, 20.25, 0, 0, 0, 0, -60.75, 20.25)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_o08m3"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -66.7673, 0.5)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_q8kwk"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1.25, 11.75, 0, 0, 0, 0, 70.5, 12)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_rforq"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 10.75, 0, 0, 0, 0, 85.25, 11)
 }
 point_count = 2
 
@@ -71,6 +89,21 @@ position = Vector2(2056, 648)
 [node name="SnailEnemy" parent="Enemies" index="0" instance=ExtResource("5_52462")]
 position = Vector2(1679, 1595)
 curve = SubResource("Curve2D_im5ls")
+not_flip = true
+
+[node name="SnailEnemy2" parent="Enemies" index="1" instance=ExtResource("5_52462")]
+position = Vector2(1186, 1931)
+scale = Vector2(4.29851, 4)
+curve = SubResource("Curve2D_o08m3")
+not_flip = true
+
+[node name="SnailEnemy3" parent="Enemies" index="2" instance=ExtResource("5_52462")]
+position = Vector2(552, 1885)
+curve = SubResource("Curve2D_q8kwk")
+
+[node name="SnailEnemy4" parent="Enemies" index="3" instance=ExtResource("5_52462")]
+position = Vector2(1577, 354)
+curve = SubResource("Curve2D_rforq")
 
 [node name="Spikes" parent="Spikes" index="0" instance=ExtResource("5_3rx80")]
 position = Vector2(872, 592)
