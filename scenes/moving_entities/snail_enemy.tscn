@@ -19,23 +19,6 @@ tracks/0/keys = {
 "values": [1]
 }
 
-[sub_resource type="Animation" id="Animation_nxv4s"]
-resource_name = "move"
-length = 0.9
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 0]
-}
-
 [sub_resource type="Animation" id="Animation_ujcrm"]
 resource_name = "death"
 length = 1.5
@@ -64,6 +47,23 @@ tracks/1/keys = {
 "args": [],
 "method": &"queue_free"
 }]
+}
+
+[sub_resource type="Animation" id="Animation_nxv4s"]
+resource_name = "move"
+length = 0.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y6ard"]
@@ -162,4 +162,4 @@ libraries = {
 "": SubResource("AnimationLibrary_2gob6")
 }
 
-[connection signal="player_stomped_on_enemy" from="AnimatableBody2D" to="." method="_on_animatable_body_2d_player_stomped_on_enemy"]
+[connection signal="player_stomped_on_enemy" from="." to="." method="_on_player_stomped_on_enemy"]

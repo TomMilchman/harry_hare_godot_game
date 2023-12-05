@@ -1,4 +1,5 @@
-extends AnimatableBody2D
+extends MovingEntity
+class_name MovingEnemy
 
 signal player_stomped_on_enemy
 
@@ -6,8 +7,10 @@ signal player_stomped_on_enemy
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$EnemyHitbox.deal_damage.connect(_on_deal_damage_to_player)
-	$EnemyHurtbox.enemy_damaged.connect(_on_enemy_damaged)
+	super()
+	
+	$AnimatableBody2D/EnemyHitbox.deal_damage.connect(_on_deal_damage_to_player)
+	$AnimatableBody2D/EnemyHurtbox.enemy_damaged.connect(_on_enemy_damaged)
 
 func _on_deal_damage_to_player(body):
 	if body is Player:
@@ -15,6 +18,6 @@ func _on_deal_damage_to_player(body):
 		player.take_damage(damage_amount)
 
 func _on_enemy_damaged():
-	$EnemyHitbox.queue_free()
-	$EnemyHurtbox.queue_free()
+	$AnimatableBody2D/EnemyHitbox.queue_free()
+	$AnimatableBody2D/EnemyHurtbox.queue_free()
 	player_stomped_on_enemy.emit()
