@@ -1,10 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bfixfggcwpyrq"]
+[gd_scene load_steps=7 format=3 uid="uid://bfixfggcwpyrq"]
 
 [ext_resource type="PackedScene" uid="uid://b30waypxt3fp3" path="res://scenes/rooms/room_base.tscn" id="1_h0r6p"]
 [ext_resource type="PackedScene" uid="uid://xd5f3py011m4" path="res://scenes/transition_points/transition_point.tscn" id="2_0nj4n"]
 [ext_resource type="Texture2D" uid="uid://by1gehsspalyv" path="res://graphics/tilemaps/Dirt Tilemap.png" id="2_6bmtp"]
-[ext_resource type="PackedScene" uid="uid://3a4j16tg8lsi" path="res://scenes/collectibles/double_jump_token.tscn" id="4_xr0k0"]
-[ext_resource type="PackedScene" uid="uid://dp2cwb8jwwub8" path="res://scenes/collectibles/air_dash_token.tscn" id="5_yjftj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j1wmi"]
 texture = ExtResource("2_6bmtp")
@@ -150,7 +148,7 @@ metadata/_edit_lock_ = true
 
 [node name="Player" parent="." index="0"]
 visible = true
-position = Vector2(768, 584)
+position = Vector2(761, 588)
 
 [node name="DirtTileMap" parent="." index="1"]
 position = Vector2(64, -192)
@@ -184,8 +182,7 @@ position = Vector2(-32, 728)
 transition_scene = "res://scenes/rooms/room_1.tscn"
 transition_position = Vector2(2012, 1112)
 
-[node name="DoubleJumpToken" parent="." index="6" instance=ExtResource("4_xr0k0")]
-position = Vector2(480, 464)
-
-[node name="AirDash" parent="." index="7" instance=ExtResource("5_yjftj")]
-position = Vector2(1008, 464)
+[node name="Room6-BottomLeft" parent="TransitionPoints" index="1" instance=ExtResource("2_0nj4n")]
+position = Vector2(1376, 736)
+transition_scene = "res://scenes/rooms/room_6.tscn"
+transition_position = Vector2(220, 1804)

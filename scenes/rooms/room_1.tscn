@@ -10,7 +10,7 @@ size = Vector2(2112, 1280)
 
 [node name="Player" parent="." index="0"]
 visible = true
-position = Vector2(2016, 1112)
+position = Vector2(2016, 404)
 
 [node name="DirtTileMap" parent="." index="1"]
 position = Vector2(1024, 584)
@@ -34,3 +34,8 @@ transition_position = Vector2(216, 584)
 position = Vector2(32, 664)
 transition_scene = "res://scenes/rooms/room_2.tscn"
 transition_position = Vector2(2272, 1544)
+
+[node name="Room5-BottomLeft" parent="TransitionPoints" index="2" instance=ExtResource("2_chc1m")]
+position = Vector2(2206, 344)
+transition_scene = "res://scenes/rooms/room_5.tscn"
+transition_position = Vector2(221, 1228)

@@ -164,6 +164,8 @@ scale = Vector2(2, 2)
 collision_mask = 14
 script = ExtResource("1_pki3f")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(2, 2)
@@ -193,8 +195,6 @@ libraries = {
 libraries = {
 "": SubResource("AnimationLibrary_vlart")
 }
-
-[node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Abilities" type="Node2D" parent="."]
 
