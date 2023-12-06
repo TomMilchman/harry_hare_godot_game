@@ -10,8 +10,8 @@ var current_health:
 		print(current_health)
 
 #These are used for determining where the player spawns after death
-var spawn_room_location: String = "res://scenes/rooms/room_2.tscn"
-var spawn_pos: Vector2 = Vector2(2272, 1544) #Always the same as the checkpoint location
+var spawn_room_location: String = "res://scenes/rooms/room_0.tscn"
+var spawn_pos: Vector2 = Vector2(768, 584) #Always the same as the checkpoint location
 
 #Player's starting position when entering a room
 var starting_pos: Vector2

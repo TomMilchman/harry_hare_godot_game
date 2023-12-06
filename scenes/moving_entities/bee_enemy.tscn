@@ -1,0 +1,75 @@
+[gd_scene load_steps=7 format=3 uid="uid://g651jub2oqje"]
+
+[ext_resource type="PackedScene" uid="uid://lhna0yd3a5ga" path="res://scenes/moving_entities/moving_enemy.tscn" id="1_1kg5p"]
+[ext_resource type="Texture2D" uid="uid://6qby4k100e0p" path="res://graphics/enemies/Bee Sprite.png" id="2_edya3"]
+[ext_resource type="Script" path="res://scenes/moving_entities/bee_enemy.gd" id="2_m371g"]
+
+[sub_resource type="Animation" id="Animation_8eaof"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_r2mjd"]
+resource_name = "move"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5uhxa"]
+_data = {
+"RESET": SubResource("Animation_8eaof"),
+"move": SubResource("Animation_r2mjd")
+}
+
+[node name="BeeEnemy" instance=ExtResource("1_1kg5p")]
+scale = Vector2(4, 4)
+script = ExtResource("2_m371g")
+loop = false
+
+[node name="PathFollow2D" parent="." index="0"]
+position = Vector2(0, 0)
+
+[node name="AnimatableBody2D" parent="." index="1"]
+position = Vector2(0, 0)
+
+[node name="Sprite2D" parent="AnimatableBody2D" index="0"]
+texture_filter = 1
+texture = ExtResource("2_edya3")
+hframes = 2
+
+[node name="EnemyHitbox" parent="AnimatableBody2D" index="1"]
+position = Vector2(0, 2)
+scale = Vector2(0.55244, 0.485414)
+
+[node name="EnemyHurtbox" parent="AnimatableBody2D" index="2"]
+position = Vector2(-1, -5)
+scale = Vector2(0.469327, -0.208558)
+
+[node name="EnemyAnimationPlayer" type="AnimationPlayer" parent="AnimatableBody2D" index="3"]
+libraries = {
+"": SubResource("AnimationLibrary_5uhxa")
+}
+autoplay = "move"
+
+[connection signal="player_stomped_on_enemy" from="." to="." method="_on_player_stomped_on_enemy"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dwledes4devk4"]
+[gd_scene load_steps=10 format=3 uid="uid://dwledes4devk4"]
 
 [ext_resource type="PackedScene" uid="uid://lhna0yd3a5ga" path="res://scenes/moving_entities/moving_enemy.tscn" id="1_6jh4c"]
 [ext_resource type="Script" path="res://scenes/moving_entities/snail_enemy.gd" id="2_q1d3n"]
@@ -73,21 +73,6 @@ _data = {
 "move": SubResource("Animation_nxv4s")
 }
 
-[sub_resource type="Animation" id="Animation_vjm6x"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PathFollow2D:progress_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.0]
-}
-
 [sub_resource type="Animation" id="Animation_8gtp7"]
 resource_name = "move"
 length = 2.0
@@ -104,27 +89,9 @@ tracks/0/keys = {
 "update": 0,
 "values": [0.0, 1.0]
 }
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"values": [{
-"args": [],
-"method": &"flip"
-}, {
-"args": [],
-"method": &"flip"
-}]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2gob6"]
 _data = {
-"RESET": SubResource("Animation_vjm6x"),
 "move": SubResource("Animation_8gtp7")
 }
 
@@ -133,6 +100,7 @@ position = Vector2(2, -34)
 scale = Vector2(4, 4)
 script = ExtResource("2_q1d3n")
 loop = false
+flip_on_turn = true
 
 [node name="PathFollow2D" parent="." index="0"]
 position = Vector2(-0.5, 8.5)

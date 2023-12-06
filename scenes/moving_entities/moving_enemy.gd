@@ -12,6 +12,7 @@ func _ready():
 	$AnimatableBody2D/EnemyHitbox.deal_damage.connect(_on_deal_damage_to_player)
 	$AnimatableBody2D/EnemyHurtbox.enemy_damaged.connect(_on_enemy_damaged)
 
+
 func _on_deal_damage_to_player(body):
 	if body is Player:
 		var player = body as Player
