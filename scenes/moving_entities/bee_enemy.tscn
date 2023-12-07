@@ -63,8 +63,8 @@ position = Vector2(0, 2)
 scale = Vector2(0.55244, 0.485414)
 
 [node name="EnemyHurtbox" parent="AnimatableBody2D" index="2"]
-position = Vector2(-1, -5)
-scale = Vector2(0.469327, -0.208558)
+position = Vector2(-0.333333, -5)
+scale = Vector2(0.516214, -0.208558)
 
 [node name="EnemyAnimationPlayer" type="AnimationPlayer" parent="AnimatableBody2D" index="3"]
 libraries = {

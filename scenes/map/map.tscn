@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://uktpfbwdg470"]
+[gd_scene load_steps=11 format=3 uid="uid://uktpfbwdg470"]
 
 [ext_resource type="PackedScene" uid="uid://bfixfggcwpyrq" path="res://scenes/rooms/room_0.tscn" id="1_o6o46"]
 [ext_resource type="PackedScene" uid="uid://mi6tx8otn81a" path="res://scenes/rooms/room_1.tscn" id="2_fj2fe"]
@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://bsq68v303udtw" path="res://scenes/rooms/room_4.tscn" id="5_at3am"]
 [ext_resource type="PackedScene" uid="uid://d1yecydquh8m5" path="res://scenes/rooms/room_5.tscn" id="6_uavjc"]
 [ext_resource type="PackedScene" uid="uid://cx62nmvo8dq6w" path="res://scenes/rooms/room_6.tscn" id="7_xnvx6"]
+[ext_resource type="PackedScene" uid="uid://b6ug2hm211p42" path="res://scenes/rooms/room_7.tscn" id="8_dnx1x"]
+[ext_resource type="PackedScene" uid="uid://flppnnaeudxh" path="res://scenes/rooms/room_8.tscn" id="9_u3lw8"]
+[ext_resource type="PackedScene" uid="uid://c82pjwe1i8b8d" path="res://scenes/rooms/room_9.tscn" id="10_5qxw4"]
 
 [node name="Map" type="Node2D"]
 position = Vector2(1168, 888)
@@ -38,4 +41,16 @@ scale = Vector2(0.5, 0.5)
 
 [node name="Room6" parent="." instance=ExtResource("7_xnvx6")]
 position = Vector2(772, -700)
+scale = Vector2(0.5, 0.5)
+
+[node name="Room7" parent="." instance=ExtResource("8_dnx1x")]
+position = Vector2(1508, -1660)
+scale = Vector2(0.5, 0.5)
+
+[node name="Room8" parent="." instance=ExtResource("9_u3lw8")]
+position = Vector2(644, -2268)
+scale = Vector2(0.5, 0.5)
+
+[node name="Room9" parent="." instance=ExtResource("10_5qxw4")]
+position = Vector2(-220, -2266)
 scale = Vector2(0.5, 0.5)

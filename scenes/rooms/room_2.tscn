@@ -131,8 +131,5 @@ position = Vector2(1448, 656)
 [node name="Spikes6" parent="Spikes" index="5" instance=ExtResource("5_3rx80")]
 position = Vector2(1512, 656)
 
-[node name="Carrot" parent="Carrots" index="0" instance=ExtResource("6_h5m1j")]
-position = Vector2(1264, 1632)
-
-[node name="Carrot2" parent="Carrots" index="1" instance=ExtResource("6_h5m1j")]
+[node name="Carrot2" parent="Carrots" index="0" instance=ExtResource("6_h5m1j")]
 position = Vector2(648, 408)

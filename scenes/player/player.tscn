@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b6y50tnjqtw5e" path="res://scenes/abilities/double_jump.tscn" id="4_ljl4c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_it3h1"]
-size = Vector2(29.5, 32)
+size = Vector2(29.5, 29)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t3nlu"]
 size = Vector2(20, 4)
@@ -174,7 +174,7 @@ hframes = 4
 vframes = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.75, 0)
+position = Vector2(0.75, 1.5)
 shape = SubResource("RectangleShape2D_it3h1")
 
 [node name="PlayerFeetHitbox" type="Area2D" parent="."]
