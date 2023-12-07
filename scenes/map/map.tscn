@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://uktpfbwdg470"]
+[gd_scene load_steps=13 format=3 uid="uid://uktpfbwdg470"]
 
 [ext_resource type="PackedScene" uid="uid://bfixfggcwpyrq" path="res://scenes/rooms/room_0.tscn" id="1_o6o46"]
 [ext_resource type="PackedScene" uid="uid://mi6tx8otn81a" path="res://scenes/rooms/room_1.tscn" id="2_fj2fe"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://b6ug2hm211p42" path="res://scenes/rooms/room_7.tscn" id="8_dnx1x"]
 [ext_resource type="PackedScene" uid="uid://flppnnaeudxh" path="res://scenes/rooms/room_8.tscn" id="9_u3lw8"]
 [ext_resource type="PackedScene" uid="uid://c82pjwe1i8b8d" path="res://scenes/rooms/room_9.tscn" id="10_5qxw4"]
+[ext_resource type="PackedScene" uid="uid://cbg1chfak306q" path="res://scenes/rooms/room_10.tscn" id="11_7iwsx"]
+[ext_resource type="PackedScene" uid="uid://cv3wt08sh1t68" path="res://scenes/rooms/room_11.tscn" id="12_mwwtu"]
 
 [node name="Map" type="Node2D"]
 position = Vector2(1168, 888)
@@ -53,4 +55,12 @@ scale = Vector2(0.5, 0.5)
 
 [node name="Room9" parent="." instance=ExtResource("10_5qxw4")]
 position = Vector2(-220, -2266)
+scale = Vector2(0.5, 0.5)
+
+[node name="Room10" parent="." instance=ExtResource("11_7iwsx")]
+position = Vector2(-764, -2938)
+scale = Vector2(0.5, 0.5)
+
+[node name="Room11" parent="." instance=ExtResource("12_mwwtu")]
+position = Vector2(-156, -3512)
 scale = Vector2(0.5, 0.5)

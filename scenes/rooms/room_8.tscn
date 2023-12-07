@@ -44,7 +44,7 @@ transition_position = Vector2(220, 651)
 [node name="Room9-TopRight" parent="TransitionPoints" index="1" instance=ExtResource("2_iewfl")]
 position = Vector2(32, 272)
 transition_scene = "res://scenes/rooms/room_9.tscn"
-transition_position = Vector2(1504, 328)
+transition_position = Vector2(1504, 332)
 
 [node name="TransitionPoint3" parent="TransitionPoints" index="2" instance=ExtResource("2_iewfl")]
 position = Vector2(1696, 288)
