@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b54uwp4xf5qx"]
+[gd_scene load_steps=19 format=3 uid="uid://b54uwp4xf5qx"]
 
 [ext_resource type="Texture2D" uid="uid://fueqirilcf1g" path="res://graphics/player/Harry Hare Character Sheet.png" id="1_0o8ck"]
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_pki3f"]
@@ -61,6 +61,23 @@ tracks/0/keys = {
 "values": [16]
 }
 
+[sub_resource type="Animation" id="Animation_upenm"]
+resource_name = "double_jump"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+
 [sub_resource type="Animation" id="Animation_r3nml"]
 resource_name = "idle"
 loop_mode = 1
@@ -116,6 +133,7 @@ _data = {
 "RESET": SubResource("Animation_tbb8f"),
 "air_dash": SubResource("Animation_8hajp"),
 "death": SubResource("Animation_ngcs5"),
+"double_jump": SubResource("Animation_upenm"),
 "idle": SubResource("Animation_r3nml"),
 "jump": SubResource("Animation_tjshw"),
 "running": SubResource("Animation_gb0iq")

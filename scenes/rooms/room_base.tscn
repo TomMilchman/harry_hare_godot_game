@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://b30waypxt3fp3"]
+[gd_scene load_steps=8 format=3 uid="uid://b30waypxt3fp3"]
 
 [ext_resource type="Script" path="res://scenes/rooms/room_base.gd" id="1_te1th"]
 [ext_resource type="Texture2D" uid="uid://by1gehsspalyv" path="res://graphics/tilemaps/Dirt Tilemap.png" id="1_vrukw"]
 [ext_resource type="PackedScene" uid="uid://b54uwp4xf5qx" path="res://scenes/player/player.tscn" id="1_xl31w"]
+[ext_resource type="PackedScene" uid="uid://dyncrt82x3kbx" path="res://ui.tscn" id="2_xit5h"]
 [ext_resource type="Script" path="res://scenes/rooms/CameraLockArea.gd" id="3_wwayh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j1wmi"]
@@ -141,8 +142,9 @@ terrain_set_0/terrain_1/name = "Grass"
 terrain_set_0/terrain_1/color = Color(0.0862745, 0.784314, 0, 1)
 sources/0 = SubResource("TileSetAtlasSource_j1wmi")
 
-[node name="RoomBase" type="Node2D"]
+[node name="RoomBase" type="Node2D" node_paths=PackedStringArray("ui")]
 script = ExtResource("1_te1th")
+ui = NodePath("UI")
 
 [node name="Player" parent="." instance=ExtResource("1_xl31w")]
 visible = false
@@ -171,3 +173,5 @@ metadata/_edit_lock_ = true
 [node name="Spikes" type="Node2D" parent="."]
 
 [node name="Carrots" type="Node2D" parent="."]
+
+[node name="UI" parent="." instance=ExtResource("2_xit5h")]

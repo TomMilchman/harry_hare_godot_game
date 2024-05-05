@@ -1,5 +1,7 @@
 extends Node
 
+signal health_changed()
+
 #Player health
 const MAX_HEALTH := 3
 var current_health:
@@ -7,7 +9,7 @@ var current_health:
 		return current_health
 	set(value):
 		current_health = value
-		print(current_health)
+		health_changed.emit()
 
 #These are used for determining where the player spawns after death
 var spawn_room_location: String = "res://scenes/rooms/room_0.tscn"

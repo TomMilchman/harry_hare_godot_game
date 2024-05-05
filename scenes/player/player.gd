@@ -1,16 +1,17 @@
 extends CharacterBody2D
 class_name Player
 
-const JUMP_VELOCITY = -530.0
+const JUMP_VELOCITY: float = -530.0
 @onready var sprite = $Sprite2D
 
-var speed = 300.0
+var speed: float = 300.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var paused_movement = false #Enabled: player cannot move
-var disabled_basic_movement = false #Enabled: player can only perform unlocked abilities
-var facing_right #Updates each time the player turns
-var can_take_damage = true #Used for iframes calculations
+var paused_movement: bool = false #Enabled: player cannot move
+var disabled_basic_movement: bool = false #Enabled: player can only perform unlocked abilities
+var facing_right: bool #Updates each time the player turns
+var can_take_damage: bool = true #Used for iframes calculations
+var has_jumped: bool = false
 
 func _ready():
 	position = PlayerGlobals.starting_pos
@@ -31,7 +32,10 @@ func _physics_process(delta):
 			# Add the gravity.
 			if not is_on_floor():
 				velocity.y += gravity * delta
-				play_animation("jump")
+				
+				if not has_jumped:
+					play_animation("jump")
+					has_jumped = true
 			
 			# Allow jump to be released early.
 			if Input.is_action_just_released("jump") and velocity.y < 0:
@@ -50,11 +54,13 @@ func _physics_process(delta):
 				
 				if is_on_floor():
 					play_animation("running")
+					has_jumped = false
 			else:
 				velocity.x = move_toward(velocity.x, 0, 30)
 				
 				if is_on_floor():
 					play_animation("idle")
+					has_jumped = false
 		
 		#Execute unlockable abilities, if they're unlocked
 		for ability_name in AbilityManager.unlocked_abilities:
@@ -68,7 +74,6 @@ func take_damage(damage_amount: int):
 	
 	if can_take_damage:
 		PlayerGlobals.current_health = clamp(health_after_damage, 0, PlayerGlobals.MAX_HEALTH)
-		
 		iframes()
 		
 		if PlayerGlobals.current_health <= 0:
